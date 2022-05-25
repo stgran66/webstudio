@@ -1,0 +1,108 @@
+.btn {
+  display: block;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: inherit;
+  @include font(16px, 700, 1.88, 0.06em);
+  color: $secondary-brand-color;
+  cursor: pointer;
+
+  background-color: $primary-brand-color;
+  color: $secondary-brand-color;
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+  }
+}
+
+.newsletter-btn {
+  margin: 0 auto;
+  position: relative;
+
+  text-align: left;
+  &__icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+.menu-btn {
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-btn__icon-menu {
+  fill: $header-text-color;
+
+  @include transition(fill);
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: $primary-brand-color;
+  }
+}
+.menu-btn-close {
+  display: inline-flex;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-btn-close__icon-cross {
+  fill: $header-text-color;
+
+  @include transition(fill);
+  .menu-btn-close:hover &,
+  .menu-btn-close:focus & {
+    fill: $primary-brand-color;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close-btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include transition(fill);
+
+  .close-btn:hover &,
+  .close-btn:focus & {
+    fill: $primary-brand-color;
+  }
+}

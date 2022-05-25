@@ -1,0 +1,33 @@
+.activities {
+  padding-top: 0;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+.activities-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  &__item {
+    margin: 15px;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    @include font($fw: 700, $lh: 1.14);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $secondary-brand-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

@@ -1,0 +1,10 @@
+@mixin font($fs: inherit, $fw: inherit, $lh: inherit, $ls: inherit) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin transition($tp1, $tp2: null, $tp3: null) {
+  transition: $tp1 250ms cubic-bezier(0.4, 0, 0.2, 1), $tp2 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $tp3 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
